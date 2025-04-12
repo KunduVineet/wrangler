@@ -33,6 +33,8 @@ import java.io.Serializable;
  */
 @PublicEvolving
 public interface Token extends Serializable {
+  String getValue();
+
   /**
    * Returns the {@code value} of the object wrapped by the
    * implementation of this interface.

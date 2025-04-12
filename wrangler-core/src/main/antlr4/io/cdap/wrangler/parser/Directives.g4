@@ -36,6 +36,14 @@ options {
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+
+ fragment DIGIT: [0-9];
+ fragment NUMBER: DIGIT+ ('.' DIGIT+)?;
+ fragment BYTE_UNIT: 'B' | 'KB' | 'MB';
+ fragment TIME_UNIT: 'ms' | 's';
+ BYTE_SIZE: NUMBER BYTE_UNIT;
+ TIME_DURATION: NUMBER TIME_UNIT;
+
 }
 
 /**
@@ -142,6 +150,7 @@ numberRange
 value
  : String | Number | Column | Bool
  ;
+ value: STRING | NUMBER | BOOLEAN | BYTE_SIZE | TIME_DURATION;
 
 ecommand
  : '!' Identifier
