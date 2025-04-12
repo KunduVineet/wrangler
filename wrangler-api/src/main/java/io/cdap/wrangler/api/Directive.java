@@ -126,4 +126,10 @@ public interface Directive extends Executor<List<Row>, List<Row>>, EntityMetrics
     // no op
     return null;
   }
+
+    void initialize(Arguments args, ExecutorContext context);
+
+  <total> Row execute(Row row, ExecutorContext context) throws RecipeException;
+
+  Row finalize(ExecutorContext context);
 }

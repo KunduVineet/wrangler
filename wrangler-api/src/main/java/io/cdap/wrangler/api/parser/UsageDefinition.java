@@ -240,5 +240,8 @@ public final class UsageDefinition implements Serializable {
     public UsageDefinition build() {
       return new UsageDefinition(directive, optionalCnt, tokens);
     }
+
+      public void addArgument(String sizeCol, boolean b, TokenType tokenType) {
+      }
   }
 }
