@@ -108,7 +108,7 @@ public final class Row implements Serializable {
    * @param col name of the column for which the value is retrieved.
    * @return value associated with column.
    */
-  public Object getValue(String col) {
+  public long getValue(String col) {
     if (col != null && !col.isEmpty()) {
       int idx = find(col);
       if (idx != -1) {
